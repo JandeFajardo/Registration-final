@@ -56,6 +56,7 @@
         <div id="container" class="container">
             <div class="row">
                 <div class="log col-sm-6 offset-sm-3 col">
+                      <img src="img/add.png" class="user">
                     <div class="info-form">
                         <form class="form-inlin justify-content-center" method="post" action="server.php">
                         <input type="hidden" name="stud_id" value="<?php echo $stud_id; ?>">

@@ -44,12 +44,7 @@ verify();
   <h3 class="display-4">What is Registration?</h3>
   <p class="lead">Registration is the systematic process that reserves seats in particular classes for eligible students. It is accomplished by following the steps announced by the student’s home school in advance of each semester’s registration period.</p>
   <hr class="my-4">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>A registration form is a list of fields that a user will input data into and submit to a company or individual. There are many reasons why you would want a person to fill out a registration form. Companies use registration forms to sign up customers for subscriptions, services, or other programs or plans.</p>
   <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 

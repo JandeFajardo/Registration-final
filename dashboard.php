@@ -46,7 +46,7 @@
 <!-- display student information -->
 	<section>
 		<div class="container table-responsive">
-			<table  class="table table-dark ">
+			<table  class="table table-dark table-condensed table-striped">
 				<thead>
 					<tr>
 						<th>Student ID</th>

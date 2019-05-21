@@ -26,6 +26,10 @@ nav ul li h4 {
 	text-shadow: 2px 2px 2px black;
 }
 
+table tr td, table tr th{
+    background: transparent;
+}
+
 .msg {
     margin: 30px auto; 
     padding: 10px; 
