@@ -9,7 +9,7 @@
 		$stud_contact = "";
 		$stud_address = "";
 		$stud_course = "";
-		$stud_year = "";
+		$stud_level = "";
 		$stud_id = 0;
 
 		$edit_state = false;
@@ -23,7 +23,7 @@
      	die('Connection failed' . mysqli_error());
  	}
 
-	// Create new data
+	// Create new data for student
 	if (isset($_POST['save'])) {	// name of button in registration form
 		$stud_lastname = $_POST['stud_lastname'];
 		$stud_firstname = $_POST['stud_firstname'];
@@ -33,9 +33,9 @@
 		$stud_contact = $_POST['stud_contact'];
 		$stud_address = $_POST['stud_address'];
 		$stud_course = $_POST['stud_course'];
-		$stud_year = $_POST['$stud_year'];
+		$stud_level = mysqli_real_escape_string($db, $_POST['stud_level']);
 
-		$query = "INSERT INTO student (stud_lastname, stud_firstname, stud_birth, stud_gender, stud_email, stud_contact, stud_address, stud_course, stud_year) VALUES ('$stud_lastname', '$stud_firstname', '$stud_birth', '$stud_gender', '$stud_email', '$stud_contact', '$stud_address', '$stud_course', '$stud_year')";
+		$query = "INSERT INTO student (stud_lastname, stud_firstname, stud_birth, stud_gender, stud_email, stud_contact, stud_address, stud_course, stud_level) VALUES ('$stud_lastname', '$stud_firstname', '$stud_birth', '$stud_gender', '$stud_email', '$stud_contact', '$stud_address', '$stud_course', '$stud_level')";
       	$result = mysqli_query($db, $query);
 
       	//$_SESSION['msg'] = 'Record has been saved!'; // notification message 
@@ -44,6 +44,31 @@
         }
 		header('location: dashboard.php'); //after adding it will redirect to dashboard page
 	}
+
+	// Create new user account
+	
+    if (isset($_POST['new_u'])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $password2 = $_POST["password2"];
+        $uFirst_name = $_POST["uFirst_name"];
+        $uLast_name = $_POST["uLast_name"];
+        $uEmail = $_POST["uEmail"];
+        
+
+        // Create new data
+        if($password == $password2) {
+        $query = "INSERT INTO login (username, password, password2, uFirst_name, uLast_name, uEmail) VALUES ('$username', '$password', '$password2', '$uFirst_name', '$uLast_name', '$uEmail')";
+
+        $result = mysqli_query($db, $query);
+        	echo "<script>alert('New account created!')</script>";
+    		echo "<script>window.open('index.php','_self')</script>";
+    	}else{
+     		echo "<script>alert('Password did not match. Please try again')</script>";
+     		echo "<script>window.open('new_account.php','_self')</script>";
+    		}
+    	}
+
 
 	// update data
 	if (isset($_POST['update'])) {
@@ -55,10 +80,10 @@
 		$stud_contact = mysqli_real_escape_string($db, $_POST['stud_contact']);
 		$stud_address = mysqli_real_escape_string($db, $_POST['stud_address']);
 		$stud_course = mysqli_real_escape_string($db, $_POST['stud_course']);
-		$stud_year = mysqli_real_escape_string($db, $_POST['stud_year']);
+		$stud_level = mysqli_real_escape_string($db, $_POST['stud_level']);
 		$stud_id = mysqli_real_escape_string($db, $_POST['stud_id']); // get the primary key to populate text field
 
-		mysqli_query($db, "UPDATE student SET stud_lastname='$stud_lastname', stud_firstname='$stud_firstname', stud_birth='$stud_birth', stud_gender='$stud_gender', stud_email='$stud_email', stud_contact='$stud_contact', stud_address='$stud_address', stud_course='$stud_course', stud_year='$stud_year' WHERE stud_id='$stud_id'");
+		mysqli_query($db, "UPDATE student SET stud_lastname='$stud_lastname', stud_firstname='$stud_firstname', stud_birth='$stud_birth', stud_gender='$stud_gender', stud_email='$stud_email', stud_contact='$stud_contact', stud_address='$stud_address', stud_course='$stud_course', stud_level='$stud_level' WHERE stud_id='$stud_id'");
 		//$_SESSION['msg'] = 'Record has been updated!'; // notification message 
 		header('location: dashboard.php');
 	}

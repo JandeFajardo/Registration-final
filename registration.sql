@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2019 at 05:38 PM
+-- Generation Time: May 21, 2019 at 10:34 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -69,7 +69,7 @@ CREATE TABLE `student` (
   `stud_contact` int(13) NOT NULL,
   `stud_address` varchar(255) NOT NULL,
   `stud_course` text NOT NULL,
-  `stud_year` int(11) NOT NULL,
+  `stud_level` int(2) NOT NULL,
   `stud_image` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -77,13 +77,11 @@ CREATE TABLE `student` (
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`stud_id`, `stud_firstname`, `stud_lastname`, `stud_birth`, `stud_gender`, `stud_email`, `stud_password`, `stud_password2`, `stud_contact`, `stud_address`, `stud_course`, `stud_year`, `stud_image`) VALUES
-(12, 'asd', 'asd', '1955-02-02', 'Male', 'jan@t.com', '', '', 912345678, '#20 don renato st. holy spirit', 'BSIT', 4, ''),
-(13, 'Nine', 'Grock', '2019-05-01', 'Female', 'bugs@g.com', '', '', 912345678, '#20 don renato st. holy spirit', 'BSIT', 0, ''),
-(14, 'Nana', 'Harith', '2019-05-02', 'Male', '22bugs@g.com', '', '', 912345678, '', 'BSIT', 4, ''),
-(17, 'Dwayne', 'Johnson', '2019-05-07', 'Male', 'q@q.com', '', '', 912345678, '', 'BSIT', 4, ''),
-(18, 'Alice', 'Dicson', '2019-05-01', 'Female', 'qwert@g.com', '', '', 912345678, '#20 don renato st. holy spirit', 'BSIT', 0, ''),
-(20, 'Angel', 'Locsin', '2019-05-01', 'Female', 'edjay@gmail.com', '', '', 912345678, '#20 don renato st. holy spirit', 'BS Nursing', 0, '');
+INSERT INTO `student` (`stud_id`, `stud_firstname`, `stud_lastname`, `stud_birth`, `stud_gender`, `stud_email`, `stud_password`, `stud_password2`, `stud_contact`, `stud_address`, `stud_course`, `stud_level`, `stud_image`) VALUES
+(29, 'Peter', 'dela Cruz', '2019-05-04', 'Male', 'jan@t.com', '', '', 912345678, '#20 don renato st. holy spirit', 'BSIT', 2, ''),
+(30, 'Angel', 'Locsin', '1994-05-21', 'Female', 'angel@g.com', '', '', 912345678, 'Sample House', 'BS Nursing', 3, ''),
+(31, 'Jande', 'Fajardo', '1990-01-01', 'Male', 'bugs@g.com', '', '', 912345678, 'Holy Spirit', 'BSIT', 4, ''),
+(32, 'Rey Mark', 'Cangque', '1990-05-09', 'Male', 'test@g.com', '', '', 2147483647, 'Quezon City', 'BS ComSci', 1, '');
 
 --
 -- Indexes for dumped tables
@@ -115,7 +113,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

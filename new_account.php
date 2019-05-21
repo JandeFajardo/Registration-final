@@ -42,25 +42,25 @@
                     <div class="info-form">
                         <form class="form-inlin justify-content-center" method="post" action="index.php">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                <input type="text" class="form-control" name="username" placeholder="Username" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password2" placeholder="Confirm Password">
+                                <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="uLast_name" placeholder="Last Name">
+                                <input type="text" class="form-control" name="uLast_name" placeholder="Last Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="uFirst_name" placeholder="First Name">
+                                <input type="text" class="form-control" name="uFirst_name" placeholder="First Name" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" name="uEmail" placeholder="Email Address">
                             </div>
                           <div class="row d-flex justify-content-around">
-                            <div class="pull-left"><button type="submit" name="save" class="btn btn-info btn-outline-light">Confirm</button></div>
+                            <div class="pull-left"><button type="submit" name="new_u" class="btn btn-info btn-outline-light">Confirm</button></div>
                             <div class="pull-right">
                               <a class="btn btn-info" href="index.php" role="button">Back to Main page</a>
                             </div>

@@ -41,8 +41,8 @@ verify();
 </nav>
 
 <div class="jumbotron bg-transparent">
-  <h3 class="display-4">What is Registration?</h3>
-  <p class="lead">Registration is the systematic process that reserves seats in particular classes for eligible students. It is accomplished by following the steps announced by the student’s home school in advance of each semester’s registration period.</p>
+  <h3 class="display-4">College</h3>
+  <p class="lead">A college (Latin: collegium) is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education or a secondary school.</p>
   <hr class="my-4">
   <p>A registration form is a list of fields that a user will input data into and submit to a company or individual. There are many reasons why you would want a person to fill out a registration form. Companies use registration forms to sign up customers for subscriptions, services, or other programs or plans.</p>
   <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>

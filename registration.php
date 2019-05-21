@@ -14,7 +14,7 @@
 			$stud_contact = $record['stud_contact'];
 			$stud_address = $record['stud_address'];
 			$stud_course = $record['stud_course'];
-			$stud_year = $record['stud_year'];
+			$stud_level = $record['stud_level'];
 			$stud_id = $record['stud_id'];
 		}
   ?>
@@ -74,20 +74,20 @@
                             </div>
                             <div class="form-group">
                                 <label>Gender</label>
-                                <select class="form-control" name="stud_gender"  placeholder="Gender">
-                                    <option value="<?php echo $stud_gender; ?>">Select Gender</option>
+                                <select class="form-control" name="stud_gender" value="<?php echo $stud_gender; ?>" placeholder="Gender">
+                                    <option>Select Gender</option>
                                     <option>Male</option>
                                     <option>Female</option>
                                 </select>  
                             </div>
                             <div class="form-group form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Course</label>
+                                    <label>Course</label>
                                     <input type="text" class="form-control" name="stud_course" value="<?php echo $stud_course; ?>" placeholder="Enter course">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Year Level</label>
-                                    <input type="text" class="form-control" name="stud_year" value="<?php echo $stud_year; ?>" placeholder="Enter year level">
+                                    <label>Year Level</label>
+                                    <input type="text" class="form-control" name="stud_level" value="<?php echo $stud_level; ?>" placeholder="Enter year level">
                                 </div>
                             </div>
                             <div class="form-group">
